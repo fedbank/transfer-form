@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(180deg, #fff, #ccc);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: #333;
+        }
+
+        /* Header Section */
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            padding: 40px 20px;
+            color: #444;
+            text-align: center;
+        }
+
+        header img {
+            width: 80px; /* Adjust logo size */
+            height: auto;
+        }
+
+        header h1 {
+            font-size: 36px;
+            margin: 0;
+        }
+
+        header p {
+            font-size: 18px;
+            margin: 10px 0 0;
+        }
+
+        /* Content Section */
+        .about-content {
+            max-width: 800px;
+            padding: 20px;
+            text-align: center;
+            line-height: 1.6;
+            font-size: 16px;
+            color: #555;
+        }
+
+        /* Buttons Section */
+        .button-container {
+            margin-top: 20px;
+            display: flex;
+            gap: 20px;
+        }
+
+        .button-container button {
+            padding: 12px 20px;
+            background: #444;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+
+        .button-container button:hover {
+            background: #666;
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
+        footer {
+            margin-top: auto;
+            text-align: center;
+            padding: 20px;
+            font-size: 12px;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="assets/pic.png" alt="Company Logo">
+        <div>
+            <h1>About Us</h1>
+            <p>Learn more about our mission, values, and team.</p>
+        </div>
+    </header>
+
+    <section class="about-content">
+        <p>
+            Welcome! We are dedicated to providing exceptional services that make a difference. 
+            Our team is passionate, innovative, and always striving to improve. We believe in transparency, integrity, and 
+            creating a positive impact in the communities we serve.
+        </p>
+        <p>
+            Whether you're here to learn about our history, explore what we offer, or get in touch, we're happy to have you.
+            Thank you for visiting us!
+        </p>
+    </section>
+
+    <div class="button-container">
+        <button onclick="window.location.href='contact.html'">Contact Us</button>
+        <button onclick="window.location.href='index.html'">Home</button>
+    </div>
+
+    <footer>
+        &copy; 2024 Federal Reserve Bank. All rights reserved.
+    </footer>
+</body>
+</html>
+

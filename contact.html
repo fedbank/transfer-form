@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #000, #d32f2f);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            color: #fff;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Logo and Heading Section */
+        .top-left {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .top-left img {
+            width: 50px;
+            height: auto;
+        }
+
+        .top-left button {
+            padding: 10px 15px;
+            background: #222;
+            border: none;
+            color: #fff;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+
+        .top-left button:hover {
+            background: #444;
+            transform: translateY(-2px);
+        }
+
+        /* Contact Form */
+        .contact-form {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+            width: 90%;
+            max-width: 600px;
+            margin-top: 60px;
+            animation: slideIn 1s ease-in-out;
+        }
+
+        .contact-form h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 24px;
+            font-weight: 600;
+            color: #f1f1f1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .contact-form h2 img {
+            width: 40px;
+            height: auto;
+        }
+
+        .contact-form label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            font-size: 14px;
+            color: #ddd;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 2px solid #555;
+            border-radius: 8px;
+            font-size: 14px;
+            color: #fff;
+            background: #444;
+            transition: all 0.3s ease;
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            border-color: #d32f2f;
+            outline: none;
+            box-shadow: 0 0 10px rgba(211, 47, 47, 0.5);
+        }
+
+        .contact-form button {
+            width: 100%;
+            padding: 12px;
+            background: linear-gradient(135deg, #d32f2f, #000);
+            border: none;
+            color: #fff;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+        }
+
+        .contact-form button:hover {
+            background: linear-gradient(135deg, #000, #d32f2f);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Footer */
+        footer {
+            position: absolute;
+            bottom: 10px;
+            text-align: center;
+            font-size: 12px;
+            color: #bbb;
+            width: 100%;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top-Left Section with Navigation Buttons -->
+    <div class="top-left">
+        <button onclick="window.location.href='index.html'">Home</button>
+        <button onclick="window.location.href='about.html'">About Us</button>
+    </div>
+
+    <!-- Contact Form -->
+    <form id="contactForm" class="contact-form">
+        <h2>
+            <img src="assets/pic.png" alt="Logo">
+            Contact Us
+        </h2>
+
+        <label for="first-name">First Name</label>
+        <input type="text" id="first-name" name="first-name" placeholder="Enter your first name" required>
+
+        <label for="last-name">Last Name</label>
+        <input type="text" id="last-name" name="last-name" placeholder="Enter your last name" required>
+
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="4" placeholder="Enter your message" required></textarea>
+
+        <button type="button" onclick="sendMessage()">Send</button>
+    </form>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2024 Federal Reserve Bank. All rights reserved.
+    </footer>
+
+    <!-- Script -->
+    <script>
+        function sendMessage() {
+            // Show success message as a popup
+            alert("Message sent, We'll get back to you soon.");
+
+            // Optionally, clear the form fields after sending the message
+            document.getElementById('contactForm').reset();
+        }
+    </script>
+
+</body>
+</html>
